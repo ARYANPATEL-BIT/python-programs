@@ -108,6 +108,16 @@
 
 # print(total)
 
+# num = int(input("enter"))
+# for i in range(num+1):
+#     print("*"*i)
+
+# num = int(input("Enter an Number"))
+# for i in range (num):
+#     for j in range (num):
+#         print("*"*i,j)
+
+
 #split,strip,replace,etc
 
 # sentence = "Python is fun to learn"
@@ -482,5 +492,90 @@
 #     freq[w] = freq.get(w, 0) + 1 
 
 # for fruit, count in freq.items():
-#     print(fruit, count)
+# #     print(fruit, count)
+
+# students = {
+#     "Ravi": {"math": 80, "science": 70, "english": 90},
+#     "priya": {"math": 85, "science": 95, "english": 92},
+#     "aman": {"math": 60, "science": 65, "english": 70}
+# }
+
+# total_marks = 0
+# num_subject = 0
+# for subjects in students.values():
+#     for marks in subjects.values():
+#         total_marks += marks
+#         num_subject +=1
+# average = total_marks/num_subject
+# print(average)
+
+#find total marks of each students
+
+# for name,subjects in students.items():
+#     total = 0
+#     for marks in subjects.values():
+#         total += marks
+#     print(name,total)
+
+#find average marks of each students
+
+# for name,subjects in students.items():
+#     total = 0
+#     count = 0
+#     for marks in subjects.values():
+#         total+=marks
+#         count +=1
+#         average = total/count
+#     print(name,average)
+
+
+# max_marks = 0
+# topper = ""
+# for name,subjects in students.items():
+#     total = sum(subjects.values())
+#     if total > max_marks:
+#         max_marks = total
+#         topper = name
+# print(topper,max_marks)
+
+
+# min_marks = None
+# opper = ""
+# for name,subjects in students.items():
+#     total = sum(subjects.values())
+#     if total < max_marks:
+#         min_marks = total
+#         opper = name
+# print(opper,min_marks)
+
+####
+# min_marks = 0
+# lowest = ""
+# for name,subjects in students.items():
+#     total = sum(subjects.values())
+#     if min_marks is None or total < min_marks:
+#         min_marks = total
+#         lowest = name
+# print(lowest,min_marks)
+
+# total_marks = 0
+# for subjects in students.values():
+#     for marks in subjects.values():
+#         total_marks += marks
+# print(total_marks)
+
+# marks = 0
+# names = ""
+# for name,subjects in students.items():
+#     total = sum(subjects.values())
+#     if marks <= 70:
+#         names = name
+# print(names)
+
+# d = {"a":1, "b":2, "c":1, "d":3}
+# unique = {}
+# for k,v in d.items():
+#     if v not in unique.values():
+#         unique[k] = v
+# print(unique)
 
