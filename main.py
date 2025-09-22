@@ -579,3 +579,101 @@
 #         unique[k] = v
 # print(unique)
 
+
+# set
+
+# s = set("Hello")
+# print(s)
+
+# s = set([1,2,3,4])
+# print(s)
+
+# s = set((1,2,3,4,5))
+# print(s)
+
+# s = set(range(5))
+# print(s)
+
+# s = {"apple","mango","banana"}
+# s.add("cherry")
+# print(s)
+
+# s = {1,2,3,4}
+# s.update([4,5])
+# print(s)
+
+# s = {1,2,3,4,5,4,3,4,3,4,5}
+# print(len(s))
+
+# a = {1,2,3,4,5,6}
+# b = {1,2,3,4,5,6,7,8,9}
+# print(a.union(b))
+# print(a|b)
+
+# s1 = { 7,8,9}
+# s2 = { 8,9,4}
+# print(s1&s2)
+# print(s1.intersection(s2))
+
+
+# a = {1,2,3,4}
+# b = {2,3,4,5,6}
+# print(a-b)
+
+# x = {1,2}
+# y = {1,2,3}
+# print(x.issubset(x))
+
+
+# x = {1,2,6}
+# y = {1,2,3}
+# print(x.issuperset(y))
+
+# x = {1,2,3}
+# y = {4,5,6}
+# print(x.isdisjoint(y))
+
+# fruit = {"apple","banana","cherry"}
+# print(fruit)
+
+# list = [1,2,3,4,5,6,4,3,2]
+# print(set(list))
+
+# set = {"red","green"}
+# set.add("blue")
+# set.remove("red")
+# print(set)
+
+# a = {1,2,3}
+# b = {3,4,5}
+# print(a.union(b))
+# print(a.intersection(b))
+# print(a-b)
+# print(a^b)
+
+# a = {1,2}
+# b = {1,2,3}
+# print(a.issubset(b))
+# print(b.issuperset(a))
+
+# words = ["apple","grape","maple"]
+# s1 = set(words[0])
+# s2 = set(words[1])
+# s3 = set(words[2])
+
+# print(s1&s2&s3)
+
+
+# words = ["apple","grape","maple"]
+# common_char =set(words[0])
+# for word in words[1:]:
+#     common_char&= set(word)
+# print(common_char)
+
+
+# n = int(input("enter the number: "))
+# for i in range (1,n+1):
+#     for j in range (1, i+1):
+#        print(j , end ="")
+#     print()
+
