@@ -580,7 +580,7 @@
 # print(unique)
 
 
-# set
+# set questions
 
 # s = set("Hello")
 # print(s)
@@ -677,3 +677,188 @@
 #        print(j , end ="")
 #     print()
 
+
+# list1 = [1,2,3,4]
+# list2 = [2,3,4,5]
+# list3 = [3,4,6]
+
+# a = set(list1)&set(list2)&set(list3)
+# print(a)
+
+# b = set(list1)|set(list2)|set(list3)
+# print(b)
+
+# remove the same frequency
+
+###
+# data =[(1,"a"),(2,"b"),(1,"c"),(3,"d"),(2,"e")]
+# seen = set()
+# list = []
+# for i in data:
+#     if i not in seen:
+#         list.append(i)
+#         seen.add(i[0])
+# print(seen)
+
+
+
+# data =[(1,"a"),(2,"b"),(1,"c"),(3,"d"),(2,"e")]
+# freq ={}
+# for i in data:
+#     num = i[0]
+#     if num in freq:
+#         freq[num]+=1
+#     else:
+#         freq[num] = 1
+# result = []
+# for i in data:
+#     num = i[0]
+#     if freq[num] ==1:
+#         result.append(i)
+# print(result)
+
+
+# words = ["apple","orange","grape"]
+# vowels = set('aeiou')
+# a =set()
+# for i in words:
+#     a.update(set(i)&vowels)
+# print(a)
+# print(len(a))
+
+
+# words = ["education","sequoia","algorithims","beautiful"]
+# vowels = set('aeiou')
+# a = []
+# for word in words:
+#     if vowels.issubset(word):
+#         a.append(word)
+# print(a)
+
+
+# def numbers(li):
+#     num = []
+#     for i in li:
+#         if i %2 ==0:
+#             num.append(i**2)
+#     print(num)
+
+# print(numbers([1,2,3,4,5,6,7,8,9,8,7,76,5,4,3,2,1]))
+
+##########
+# def multiplication(size):
+#     num = []
+#     for i in range(1,size+1):
+#         row =[]
+#         for j in range(1,size+1):
+
+
+# def func(li1,li2):
+#     list = []
+#     for i in li1:
+#         if i in li2:
+#             list.append(i)
+#         return list
+# a = set {list}
+
+
+# def group(words):
+#     result={}
+#     first = words[0].lower()
+#     if first not in result:
+#         result[first] = set()
+#     result[first].add[words]
+#     result
+
+
+# file = open("sample.txt","r")
+# content = file.read()
+# print(content)
+# file.close
+
+# file = open("sample.txt","w")
+# file.write("hello world")
+# file.write("\nI am the Best!")
+
+
+# file=open("sample.txt","a")
+# file.write("\n I am the smartest")
+# file.close
+
+# file = open("sample.txt","r")
+# print(file.read())
+
+
+# readline()
+# file = open("sample.txt","r")
+# print(file.readline())
+# print(file.readline())
+# print(file.readline())
+
+
+#readlines()
+# file = open("sample.txt","r")
+# print(file.readlines())
+
+# writeline()
+
+# file = open("sample.txt","w")
+# file.write("i am the greatest")
+
+# writelines()
+# file =open("sample.txt","w")
+# file.writelines(["I am the greatest\n","I will Win"])
+
+# with open("sample.txt","r") as file:
+#     content = file.read()
+#     print(content)
+
+
+# file = open("sample.txt","w")
+# file.writelines(["Aryan\n","God\n","iathaar\n","aditya\n","ayaan\n"])
+
+# file = open("sample.txt","r")
+# a = file.readlines()
+# file.close
+# b = a.split()
+# lines = 0
+# letters = 0
+# for i in b :
+#     lines +=1
+#     for j in i:
+#         letters +=1
+    
+# print("total lines:",lines)
+# print("total words:",letters)
+    
+
+# file = open("sample.txt","r")
+# lines = file.readlines()
+# file.close()
+# num_lines = len(lines)
+# num_words = sum(len(line.split()) for line in lines)
+# print(num_lines)
+# print(num_words)
+
+# file = open("sample.txt","r")
+# a = file.read()
+# file.close
+# words = a.split()
+# word_freq ={}
+# for i in words:
+#     if i in word_freq:
+#         word_freq[i] +=1
+#     else:
+#         word_freq[i] =1
+# print(word_freq)
+# print(i)
+
+
+
+# def sign(num):
+#     if num == 0:
+#         print("0")
+#     elif num > 0:
+#         print("1")
+#     elif num < 0:
+#         print("-1")
