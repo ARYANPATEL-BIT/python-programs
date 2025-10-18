@@ -859,6 +859,7 @@
 #     if num == 0:
 #         print("0")
 #     elif num > 0:
-#         print("1")
+#         print("1") 
 #     elif num < 0:
 #         print("-1")
+# All the things are just comments 
