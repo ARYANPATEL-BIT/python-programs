@@ -859,9 +859,10 @@
 #     if num == 0:
 #         print("0")
 #     elif num > 0:
-#         print("1")
+#         print("1") 
 #     elif num < 0:
 #         print("-1")
+<<<<<<< HEAD
 
 
 
@@ -874,3 +875,6 @@
 #             unique.append((t[i] , t[j] ))
 # print(unique)
 
+=======
+# All the things are just comments 
+>>>>>>> 7534947b2ced8b57cfe7ae9eccf57dc56c24b046
