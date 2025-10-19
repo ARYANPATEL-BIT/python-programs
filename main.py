@@ -862,3 +862,15 @@
 #         print("1")
 #     elif num < 0:
 #         print("-1")
+
+
+
+# t = (9,1,2,3,4,5,6,7,7,6,5,4,3,2,1)
+
+# unique =[]
+# for i in range(len(t)):
+#     for j in range(i+1, len(t)):
+#         if t[i] + t[j] == 10:
+#             unique.append((t[i] , t[j] ))
+# print(unique)
+
