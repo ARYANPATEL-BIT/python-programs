@@ -108,8 +108,7 @@
 # def celsius_to_fahrenheit(celsius):
 #     if celsius < -271.15:
 #         raise ValueError("Temperature can not be below absolute temperature")
-    
-#     print(fahrenheit)
+
 # try:
 #     celsius = float(input("Please enter the value"))
 #     celsius_to_fahrenheit(celsius)
