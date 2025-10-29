@@ -288,4 +288,3 @@
     
 # print(MathUtils.is_prime(10))
 # print(MathUtils.is_prime(7))
-
