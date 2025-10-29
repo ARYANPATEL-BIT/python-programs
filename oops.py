@@ -224,6 +224,7 @@
 #     def __init__ (self,model,mileage):
 #         self.model = model
 #         self.mileage = mileage
+#         Car.total_cars += 1
 
 #     @staticmethod
 #     def is_mileage_good(mileage):
@@ -289,3 +290,110 @@
 # print(MathUtils.is_prime(10))
 # print(MathUtils.is_prime(7))
 
+
+# class Car:
+#     wheels = 4
+#     def __init__ (self,brand):
+#         self.brand = brand
+
+# c1 = Car("benz")
+# c2 = Car("Dodge")
+
+# print(c1.wheels)
+# print(c2.wheels)
+
+# Car.wheels = 6
+
+# print(c1.wheels)
+# print(c2.wheels)
+
+
+# class student:
+#     def __init__(self,name, age):
+#         self.name = name
+#         self.age = age
+
+#     def info(self):
+#         return f"{self.name} {self.age}"
+# s1 = student("aryan",20)
+# print(s1.info())
+
+
+# class Student:
+
+#     def __init__ (self,name,marks):
+#         self.name = name
+#         self.marks = marks
+
+# class Topper(Student):
+#     def show_marks(self):
+#         print(self.name, self.marks)
+
+# s1 = Topper("Aryan" , 100)
+
+# s1.show_marks()
+
+
+# class BankAccount:
+
+#     def __init__(self,name,balance):
+#         self.name = name
+#         self.__balance = balance
+
+#     def show_balance(self):
+#         return f"{self.name}, {self.__balance}"
+
+# c1 = BankAccount("Aryan",2039492)
+
+# print(c1.show_balance())
+# print(c1.name)
+# print(c1.__balance)   ## will not work because of private attribute
+
+
+
+# class Book:
+#     def __init__(self,title,author):
+#         self.title = title
+#         self.author = author
+    
+#     def show_details(self):
+#         print(f"Title: {self.title} , Author: {self.author}")
+
+# a1 = Book("...","Aryan")
+# a2 = Book("Unknow","Aryan")
+
+# a1.show_details()
+# a2.show_details()
+
+
+# class Employee:
+
+#     def __init__(self,name,salary):
+#         self.name = name
+#         self.__salary = salary
+
+#     def manager(self):
+#         return  f"Name: {self.name}, Salary: {self.__salary}"
+    
+# e1 = Employee("Aryan", 9358938)
+# print(e1.name)
+# print(e1)      ## will only show the name because the the salary attribute is private
+# print(e1.manager())
+
+
+
+# class locker:
+#     def __init__(self):
+#         self.__pin = 1234
+    
+#     def access(self):
+#         got_Pin = int(input("Please enter the Pin: "))
+#         if(got_Pin == self.__pin):
+#             return "Access granted"
+#         else:
+#             return "Access Denied"
+    
+# user1 = locker()
+
+# print(user1.access())
+# print(user1.__pin)
