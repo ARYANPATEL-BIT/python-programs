@@ -753,3 +753,35 @@
 
 # student = PremiumStudent("aryan","@gmial","cs","ai")
 # student.show_details()
+
+
+
+
+# class Student:
+#     def __init__(self,name,score):
+#         self.name = name
+#         self.score = score
+
+#     def getName(self):
+#         return self.name
+    
+#     def getScore(self):
+#         return self.score
+
+
+
+# try:
+#     s1 = Student("aryan",99)
+
+#     try:
+#         if s1.getScore() <=0 or s1.getScore() >100:
+#              raise ValueError("he score must be a positve number in range 1 - 100")
+#         print(s1.getName)
+#         print(s1.getScore)
+#     except ValueError as error:
+#         print(error)
+#     except ValueError as error:
+#         print(error)
+#         print("An unknown error occured")
+# except Exception as outer_error:
+#     print("Outer error: ", outer_error)
