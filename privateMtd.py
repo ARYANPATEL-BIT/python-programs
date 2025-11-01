@@ -29,6 +29,20 @@
 # print(e1.manager())
 
 
+# class BankAccount:
+
+#     def __init__(self,name,balance):
+#         self.name = name
+#         self.__balance = balance
+
+#     def show_balance(self):
+#         return f"{self.name}, {self.__balance}"
+
+# c1 = BankAccount("Aryan",2039492)
+
+# print(c1.show_balance())
+# print(c1.name)
+# print(c1.__balance)   ## will not work because of private attribute
 
 
 # class Car:
@@ -133,3 +147,74 @@
 # w1.spend_money(8900)
 # w1.show_wallet()
         
+
+
+
+# class ShoppingCart:
+
+#     def __init__(self):
+#         self.__total_amount = 0
+    
+#     def add(self,inc):
+#         self.__total_amount += inc
+    
+#     def remove(self, out):
+#         if(self.__total_amount - out >= 0):
+#             self.__total_amount -= out
+#         else:
+#             print(f"current Amount {self.__total_amount} can not do in negative")
+        
+#     def display(self):
+#         print(f"Your current ammount is {self.__total_amount}")
+
+
+# p1 = ShoppingCart()
+
+# p1.add(1990238)
+# p1.display()
+# p1.remove(29348)
+# p1.display()
+# p1.remove(9348503)
+# p1.display()
+
+
+
+# class fuelTank:
+#     def __init__(self):
+#         self.__fuel_level = 0
+
+#     def add_fuel(self, add_fuel):
+#         if(self.__fuel_level + add_fuel <= 50):
+#             self.__fuel_level += add_fuel
+#         elif (self.__fuel_level + add_fuel == 50):
+#             self.__fuel_level = 50
+#         else:
+#             self.__fuel_level = 50
+#             print("Your tank is full can not fill more than 50 Liters")
+
+#     def use_fuel(self,del_fuel):
+#         if(self.__fuel_level - del_fuel >= 0):
+#             self.__fuel_level -= del_fuel
+#         elif(self.__fuel_level - del_fuel == 0):
+#             self.__fuel_level = 0
+#         else:
+#             self.__fuel_level = 0
+#             print('Fuel Tank is empty please fill the fuel.')
+    
+#     def check_fuel(self):
+#         print(f"Fuel Level is {self.__fuel_level}")
+
+# f1 = fuelTank()
+
+# f1.add_fuel(39)
+# f1.check_fuel()
+# f1.use_fuel(29)
+# f1.check_fuel()
+# f1.add_fuel(41)
+# f1.check_fuel()
+# f1.use_fuel(41)
+# f1.check_fuel()
+# f1.add_fuel(98453)
+# f1.check_fuel()
+# f1.use_fuel(89437)
+# f1.check_fuel()

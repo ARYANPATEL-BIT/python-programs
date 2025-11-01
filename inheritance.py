@@ -1,3 +1,19 @@
+# # class Student:
+
+#     def __init__ (self,name,marks):
+#         self.name = name
+#         self.marks = marks
+
+# class Topper(Student):
+#     def show_marks(self):
+#         print(self.name, self.marks)
+
+# s1 = Topper("Aryan" , 100)
+
+# s1.show_marks()
+
+
+
 # class Vehical:
 #     def __init__(self,brand):
 #         self.brand = brand
@@ -11,6 +27,22 @@
 # c =Car("bmw")
 # c.drive()
 # c.start()
+
+
+# class Animal:
+#     def eat(self):
+#         print("all animal eats")
+# class dog(Animal):
+#     def speak(self):
+#         print("barks")
+
+# class Cat(Animal):
+#     def speak(self):
+#         print("meow")
+
+# d =dog()
+# c = Cat()
+# d.speak()
 
 
 
