@@ -204,8 +204,8 @@
 #         self.working_hours = working_hours
     
 #     @classmethod
-#     def applicable(cls,new_bonus):
-#         if(Employee.working_hours > 25):
+#     def applicable(cls,emp,new_bonus):
+#         if emp.working_hours > 25:
 #             cls.bonus = new_bonus
         
 #     def show_details(self):
@@ -215,8 +215,8 @@
 # e1 = Employee(26)
 # e2 = Employee(24)
 
-# e1.applicable(1250)
-# e2.applicable(1250)
+# e1.applicable(e1,1250)
+# e2.applicable(e2,1250)
 # e1.show_details()
 # e2.show_details()
 
@@ -316,6 +316,22 @@
 
 
 
+# class MathUtils:
+
+#     @staticmethod
+
+#     def is_prime(n):
+#         if n < 2:
+#             return False
+#         for i in range(2,int(n) +1):
+#             if n % i == 0:
+#                 return False
+#         return True
+    
+# print(MathUtils.is_prime(10))
+# print(MathUtils.is_prime(7))
+
+
 # class Car:
 #     wheels = 4
 #     def __init__ (self,brand):
@@ -391,71 +407,6 @@
 # a2.show_details()
 
 
-# class Employee:
-
-#     def __init__(self,name,salary):
-#         self.name = name
-#         self.__salary = salary
-
-#     def manager(self):
-#         return  f"Name: {self.name}, Salary: {self.__salary}"
-    
-# e1 = Employee("Aryan", 9358938)
-# print(e1.name)
-# print(e1)      ## will only show the name because the the salary attribute is private
-# print(e1.manager())
-
-
-
-# class locker:
-#     def __init__(self):
-#         self.__pin = 1234
-    
-#     def access(self):
-#         got_Pin = int(input("Please enter the Pin: "))
-#         if(got_Pin == self.__pin):
-#             return "Access granted"
-#         else:
-#             return "Access Denied"
-    
-# user1 = locker()
-
-# print(user1.access())
-# print(user1.__pin)
-
-
-# class Car:
-#     def __init__(self):
-#         self.__speed = 0
-    
-#     def acceleration(self,inc):
-#         if (self.__speed + inc <=200):
-#             self.__speed += inc
-#         else :
-#             self.__speed = 200
-    
-#     def brack(self,inc):
-#         if(self.__speed - inc >= 0):
-#             self.__speed -= inc
-#         else:
-#             self.__speed = 0
-    
-#     def get_speed(self):
-#         print(f"current speed : {self.__speed}")
-
-
-# s1 = Car()
-
-# s1.acceleration(100)
-# s1.get_speed()
-# s1.brack(90)
-# s1.get_speed()
-# s1.acceleration(1000)
-# s1.get_speed()
-# s1.brack(93230)
-# s1.get_speed()
-
-
 
 # class ShoppingCart:
 
@@ -527,122 +478,6 @@
 
 
 
-# class Wallet:
-#     def __init__ (self):
-#         self.__amount = 0
-#         self.limit = 0
-
-#     def add_money(self,add):
-#         self.__amount += add
-    
-#     def spend_money(self,remove):
-#         if remove > self.__amount:
-#             print("❌ Insufficient Funds.")
-#         elif remove > self.limit:
-#             self.__amount -= self.limit
-#             print(f"⚠️ Cannot spend more than daily limit")
-#         else:
-#             self.__amount -= remove
-#             print(f"✅ Spent {remove}. Remaining balance: ₹{self.__amount}")
-
-#     def set_limit(self,limit_value):
-#         self.limit = limit_value
-#         print(f"Your current limit is {self.limit}")
-
-#     def show_wallet(self):
-#         print(f"💰 Current balance: {self.__amount}")
-
-
-# w1 = Wallet()
-# w1.set_limit(10000)
-# w1.add_money(10001)
-# w1.show_wallet()
-# w1.spend_money(1000)
-# w1.show_wallet()
-# w1.spend_money(8900)
-# w1.show_wallet()
-
-
-# class Wallet:
-#     def __init__ (self,limit):
-#         self.__amount = 0
-#         self.limit = limit
-
-#     def add_money(self,add):
-#         self.__amount += add
-    
-#     def spend_money(self,remove):
-#         if(self.__amount - remove < 0 ):
-#             print("Insufficient Funds")
-#         elif(self.__amount - remove  > 0 and remove <= self.limit):
-#             self.__amount -= remove
-#             self.limit -= remove
-#         elif(self.__amount - remove >0 and remove > self.limit):
-#             self.__amount -= self.limit
-#             print("daily limit reached cannot remove more than")
-    
-#     def show_wallet(self):
-#         print(f"your current balance : {self.__amount}. Remaining daily limit: {self.limit}")
-
-# w1 = Wallet(10000)
-
-# w1.add_money(10001)
-# w1.show_wallet()
-# w1.spend_money(1000)
-# w1.show_wallet()
-# w1.spend_money(8900)
-# w1.show_wallet()
-        
-
-
-# class Vehical:
-#     def __init__(self,brand):
-#         self.brand = brand
-#     def start(self):
-#         print(self.brand)
-
-# class Car(Vehical):
-#     def drive(self):
-#         print(self.brand)
-
-# c =Car("bmw")
-# c.drive()
-# c.start()
-
-# class Grandfather:
-#     def house(self):
-#         print("grandfather house")
-# class Father(Grandfather):
-#     def car(self):
-#         print("father car")
-# class Son(Father):
-#     def bike(self):
-#         print("son bike")
-
-# s = Son()
-# s.house()
-# s.car()
-# s.bike()
-
-
-# class Mother:
-#     def eye(self):
-#         print("Mother")
-
-# class Father:
-#     def  face(self):
-#         print("Father")
-
-# class Child(Mother,Father):
-#     def brain(self):
-#         print("Child")
-
-# c = Child()
-# c.eye()
-# c.face()
-# c.brain()
-
-
 # class Animal:
 #     def eat(self):
 #         print("all animal eats")
@@ -657,103 +492,6 @@
 # d =dog()
 # c = Cat()
 # d.speak()
-# c.speak()
-
-
-
-# class Book:
-#     def __init__ (self,title,author):
-#         self.title = title
-#         self.author = author
-# class EBook(Book):
-#     def __init__(self, title, author,file_size):
-#         super().__init__(title,author)
-#         self.file_size = file_size
-
-#     def display(self):
-#         print(f"Author: {self.author} \nTitle: {self.title} \nfile size: {self.file_size}")
-        
-# ebook = EBook("Unknown","Aryan",75)
-# ebook.display()
-
-
-
-# class Commpany:
-#     def __init__(self,company_name):
-#         self.company_name = company_name
-
-# class Employee(Commpany):
-#     def __init__(self,company_name,employee_name):
-#         super().__init__(company_name)
-#         self.employee_name = employee_name
-
-# class Developer(Employee):
-#     def __init__(self,company_name,employee_name,tech_stack):
-#         super().__init__(company_name,employee_name)
-#         self.tech_stack = tech_stack
-    
-# class TeamLead(Developer):
-#     def __init__(self,company_name,employee_name,tech_stack,team_size):
-#         super().__init__(company_name,employee_name,tech_stack)
-#         self.team_size = team_size
-
-
-# class Info(TeamLead):
-#     def display(self):
-#         print(f"Employee: {self.employee_name} \nTech Stack: {self.tech_stack} \nCompany: {self.company_name} \nTeam Size: {self.team_size}")
-
-
-# person = Info("Google","Aryan","Machine Learning",10)
-
-# person.display()
-
-
-# class Camera:
-#     def __init__(self,take_photo):
-#         self.take_photo = take_photo
-
-# class Phone:
-#     def __init__(self,make_call):
-#         self.make_call = make_call
-
-# class Smart_Phone(Camera,Phone):
-#     def __init__(self,take_photo,make_call,browse_internet):
-#         super().__init__(take_photo,make_call)
-#         self.browse_internet = browse_internet
-
-# class Display(Smart_Phone):
-#     def display(self):
-#         print(f"{self.take_photo},{self.make_call},{self.browse_internet}")
-
-# phone = Display("photo took","made call","browsed internet")
-# phone.display()
-
-
-# class User:
-#     def __init__(self,name,email):
-#         self.name = name 
-#         self.email = email
-
-# class Student(User):
-#     def __init__(self,name,email,course):
-#         super().__init__(name,email)
-#         self.course = course
-
-# class PremiumStudent(Student):
-#     def __init__(self,name,email,course,subscription_fee):
-#         super().__init__(name,email,course)
-#         self.subscription_fee = subscription_fee
-    
-#     def show_details(self):
-#         print(self.name)
-#         print(self.email)
-#         print(self.course)
-#         print(self.subscription_fee)
-
-
-# student = PremiumStudent("aryan","@gmial","cs","ai")
-# student.show_details()
-
 
 
 
@@ -768,19 +506,17 @@
 #     def getScore(self):
 #         return self.score
 
-
-
 # try:
 #     s1 = Student("aryan",99)
 
 #     try:
 #         if s1.getScore() <=0 or s1.getScore() >100:
 #              raise ValueError("he score must be a positve number in range 1 - 100")
-#         print(s1.getName)
-#         print(s1.getScore)
+#         print(s1.getName())
+#         print(s1.getScore())
 #     except ValueError as error:
 #         print(error)
-#     except ValueError as error:
+#     except Exception as error:
 #         print(error)
 #         print("An unknown error occured")
 # except Exception as outer_error:
