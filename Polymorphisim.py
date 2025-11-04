@@ -73,7 +73,7 @@
 # print([1,2]+[3,4])
 
 
-## duck method
+# ## duck method
 
 # class Printer:
 #     def work(self):
@@ -90,6 +90,30 @@
 
 # for a in operate:
 #     a.work()
+
+
+
+# class CreditCard:
+#     def make_payment(slef,amount):
+#         print(amount)
+
+# class PayPal:
+#     def make_payment(self,amount):
+#         print(amount)
+
+# class UPI:
+#     def make_payment(self,amount):
+#         print(amount)
+
+# def process_payment(payment_method,amount):
+#     payment_method.make_payment(amount)
+
+# for method in [CreditCard(),PayPal(),UPI()]:
+#     process_payment(method,2834)
+
+
+
+
 
 
 ## over riding method
@@ -109,6 +133,26 @@
 # for shape in [Circle(),Square(),Shape()]:
 #     shape.area()
 
+# class vehicle:
+#     def max_speed(self):
+#         return 200
+# class Bike(vehicle):
+#     def max_speed(self):
+#         return 180
+
+# class Car(vehicle):
+#     def max_speed(self):
+#         return 150
+
+# class Truck(vehicle):
+#     def max_speed(self):
+#         return 120
+
+# def Show_Speed(vehicle):
+#     print(vehicle.max_speed())
+
+# for method in [Bike(),Car(),Truck(),vehicle()]:
+#     Show_Speed(method)
 
 
 # class Employe:
