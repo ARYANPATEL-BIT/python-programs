@@ -86,7 +86,7 @@
 # for device in [Printer(), Scanner()]:    ##1 way to do it
 #     device.work()
 
-# operate = [Printer(), Scanner()]       ##2nd way ti do it
+# operate = [Printer(), Scanner()]       ##2nd way to do it
 
 # for a in operate:
 #     a.work()

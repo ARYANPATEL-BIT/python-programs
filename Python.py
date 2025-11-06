@@ -283,6 +283,6 @@
 #     print()
 
 
-scores = {"Ravi": 85, "Priya": 92, "Aman": 78, "Sneha": 95}
-sorted_scores = sorted(scores, key = scores.get)
-sorted_values = {k : scores[k] for k in sorted_scores}
+# scores = {"Ravi": 85, "Priya": 92, "Aman": 78, "Sneha": 95}
+# sorted_scores = sorted(scores, key = scores.get)
+# sorted_values = {k : scores[k] for k in sorted_scores}
