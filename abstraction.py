@@ -122,61 +122,30 @@
 
 
 
-# from abc import ABC,abstractmethod
+from abc import ABC,abstractmethod
 
-# class Payment(ABC):
-#     @abstractmethod
-#     def make_payment(self):
-#         pass
+class Payment(ABC):
+    @abstractmethod
+    def make_payment(self):
+        pass
 
-# class CreditCard(Payment):
-#     def make_payment(self,amount):
-#         print("payment done via Creditcard",amount)
-
-
-# class PayPal(Payment):
-#     def make_payment(self,amount):
-#         print("payment done via PayPal",amount)
-
-# class UPI(Payment):
-#     def make_payment(self,amount):
-#         print("payment done via UPI",amount)
+class CreditCard(Payment):
+    def make_payment(self,amount):
+        print("payment done via Creditcard",amount)
 
 
-# payment = [CreditCard(), PayPal(), UPI()]
+class PayPal(Payment):
+    def make_payment(self,amount):
+        print("payment done via PayPal",amount)
 
-# for p in payment:
-#     p.make_payment(1900)
+class UPI(Payment):
+    def make_payment(self,amount):
+        print("payment done via UPI",amount)
 
 
+payment = [CreditCard(), PayPal(), UPI()]
 
-# from abc import ABC,abstractmethod
+for p in payment:
+    p.make_payment(1900)
 
-# class Shape(ABC):
-#     def __init__(self,color):
-#         self.color = color
-    
-#     @abstractmethod
-#     def area(self):
-#         pass
 
-# class circle(Shape):
-#     def __init__(self,radius):
-#         self.radius = radius
-#     def area(self):
-#         return self.radius*self.radius*3.14
-    
-
-# class Rectangle(Shape):
-
-#     def __init__(self,height,width):
-#         self.height = height
-#         self.width = width
-#     def area(self):
-#         return self.height * self.width
-    
-
-# r = Rectangle(2,5)
-# c = circle(5)
-# print(r.area())
-# print(c.area())
