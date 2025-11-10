@@ -184,27 +184,38 @@ import random
 #         print("correct")
 
 
-quiz = [ 
-    {
-        "question1": "What are you?",
-        "options": {
-            "a": "Human",
-            "b": "Animal",
-            "c": "soul",
-            "d": "dont know"
-        },
-        "answer":"c"
 
-}]
+# quiz = [ 
+#     {
+#         "question1": "What are you?",
+#         "options": {
+#             "a": "Human",
+#             "b": "Animal",
+#             "c": "soul",
+#             "d": "dont know"
+#         },
+#         "answer":"c"
+
+# }]
 
 
 
-selected_questions = random.choice(quiz)
-print(selected_questions)
-for key,value in selected_questions["options"].items():
-    print(f"{key}: {value}")
-user_answer = input("enter your options:(a/b/c/d)").strip().lower()
-if user_answer == selected_questions["answer"]:
-    print("correct")
-else:
-    print("Wrong Answer")
+# selected_questions = random.choice(quiz)
+# print(selected_questions)
+# for key,value in selected_questions["options"].items():
+#     print(f"{key}: {value}")
+# user_answer = input("enter your options:(a/b/c/d)").strip().lower()
+# if user_answer == selected_questions["answer"]:
+#     print("correct")
+# else:
+#     print("Wrong Answer")
+
+
+import datetime
+
+# dob = datetime.date(2005,7,20)
+# today = datetime.date.today()
+# age_days = (today-dob).days
+# age_years = age_days // 365
+# print(age_years)
+# print(age_days)
