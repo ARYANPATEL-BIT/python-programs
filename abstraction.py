@@ -24,7 +24,7 @@
 #         self.width = width
     
 #     def area(self):
-#         return self.length*self.width
+#         return self.length * self.width
 
 # c = Circle(5)
 # r = Reactangle(3,4)
@@ -53,6 +53,26 @@
 
 # print(c.start_engine())
 # print(b.start_engine())
+
+
+# from abc import ABC,abstractmethod
+
+# class vehicle(ABC):
+#     def start(self):
+#         pass
+# class car(vehicle):
+#     def start(self):
+#         return "car has started"
+# class bike(vehicle):
+#     def start(self):
+#         return "bike has started"
+    
+# c = car()
+# b = bike()
+
+# print(c.start())
+# print(b.start())
+
 
 # from abc import ABC , abstractmethod
 
@@ -90,6 +110,43 @@
 # print(r.turn_on())
 # print(r.turn_off())
 
+# from abc import ABC,abstractmethod
+
+# class appliance(ABC):
+
+#     @abstractmethod
+#     def turn_on(self):
+#         pass
+
+#     @abstractmethod
+#     def turn_off(self):
+#         pass
+
+# class wm(appliance):
+#     def turn_off(self):
+#         return "turn off"
+        
+#     def turn_on(self):
+#         return "turn on"
+
+
+
+# class rf(appliance):
+#     def turn_off(self):
+#         return "turn off"
+        
+#     def turn_on(self):
+#         return "turn on"
+    
+# w = wm()
+# r = rf()
+
+# print(w.turn_off())
+# print(w.turn_on())
+# print(r.turn_off())
+# print(r.turn_on())
+
+
 
 
 # from abc import ABC,abstractmethod
@@ -122,30 +179,30 @@
 
 
 
-from abc import ABC,abstractmethod
+# from abc import ABC,abstractmethod
 
-class Payment(ABC):
-    @abstractmethod
-    def make_payment(self):
-        pass
+# class Payment(ABC):
+#     @abstractmethod
+#     def make_payment(self):
+#         pass
 
-class CreditCard(Payment):
-    def make_payment(self,amount):
-        print("payment done via Creditcard",amount)
-
-
-class PayPal(Payment):
-    def make_payment(self,amount):
-        print("payment done via PayPal",amount)
-
-class UPI(Payment):
-    def make_payment(self,amount):
-        print("payment done via UPI",amount)
+# class CreditCard(Payment):
+#     def make_payment(self,amount):
+#         print("payment done via Creditcard",amount)
 
 
-payment = [CreditCard(), PayPal(), UPI()]
+# class PayPal(Payment):
+#     def make_payment(self,amount):
+#         print("payment done via PayPal",amount)
 
-for p in payment:
-    p.make_payment(1900)
+# class UPI(Payment):
+#     def make_payment(self,amount):
+#         print("payment done via UPI",amount)
+
+
+# payment = [CreditCard(), PayPal(), UPI()]
+
+# for p in payment:
+#     p.make_payment(1900)
 
 

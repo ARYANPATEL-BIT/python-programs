@@ -11,7 +11,7 @@
 
 # class Robot:
 #     def speak(self):
-#         print("Dog can speak")
+#         print("Robot can speak")
 
 # class Dog:
 #     def speak(self):
@@ -24,7 +24,6 @@
 #     call_to_speak(creation)
 
 # print(Human().speak())
-
 
 
 
@@ -46,6 +45,22 @@
 #     a.sound()
 
 
+# class animal:
+#     def sound(self):
+#         print("sound1")
+
+# class robot:
+#     def sound(self):
+#         print("sound2")
+
+# class human:
+#     def sound(self):
+#         print("sound3")
+
+# voice = [human(),robot(),animal()]
+
+# for v in voice:
+#     v.sound()
 
 
 # class Math:
@@ -113,9 +128,6 @@
 
 
 
-
-
-
 ## over riding method
 
 # class Shape:
@@ -132,6 +144,8 @@
 
 # for shape in [Circle(),Square(),Shape()]:
 #     shape.area()
+
+
 
 # class vehicle:
 #     def max_speed(self):
@@ -178,5 +192,3 @@
 # obj.info("Aryan")
 # obj.info("Aryan","Engineering")
 # obj.info("Aryan", "Engineering",28934571)
-
-

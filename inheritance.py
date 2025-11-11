@@ -1,4 +1,4 @@
-# # class Student:
+# class Student:
 
 #     def __init__ (self,name,marks):
 #         self.name = name
@@ -24,7 +24,7 @@
 #     def drive(self):
 #         print(self.brand)
 
-# c =Car("bmw")
+# c =Car("BMW")
 # c.drive()
 # c.start()
 
@@ -40,10 +40,10 @@
 #     def speak(self):
 #         print("meow")
 
-# d =dog()
+# d = dog()
 # c = Cat()
 # d.speak()
-
+# c.speak()
 
 
 # class Grandfather:
@@ -120,15 +120,14 @@
 #         super().__init__(company_name,employee_name,tech_stack)
 #         self.team_size = team_size
 
-
 # class Info(TeamLead):
 #     def display(self):
 #         print(f"Employee: {self.employee_name} \nTech Stack: {self.tech_stack} \nCompany: {self.company_name} \nTeam Size: {self.team_size}")
 
-
 # person = Info("Google","Aryan","Machine Learning",10)
 
 # person.display()
+
 
 
 # class Camera:
@@ -151,8 +150,6 @@
 # phone = Display("photo took","made call","browsed internet")
 # phone.display()
 
-
-# c.speak()
 
 
 # class User:
@@ -177,6 +174,5 @@
 #         print(self.subscription_fee)
 
 
-# student = PremiumStudent("aryan","@gmial","cs","ai")
+# student = PremiumStudent("aryan","@gmail","cs","ai")
 # student.show_details()
-
