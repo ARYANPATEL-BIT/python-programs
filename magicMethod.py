@@ -20,7 +20,6 @@
 #         self.kilometers = kilometers
 #         self.meters = meters
 
-    
 #     def __add__(self,other):
 #         total_m = self.meters + other.meters
 #         total_km = self.kilometers + other.kilometers + total_m // 1000
@@ -34,5 +33,3 @@
 # d2 = Distance(371,238)
 # d3 = d1 + d2
 # print(d3)
-
-
