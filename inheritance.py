@@ -140,7 +140,8 @@
 
 # class Smart_Phone(Camera,Phone):
 #     def __init__(self,take_photo,make_call,browse_internet):
-#         super().__init__(take_photo,make_call)
+#         Camera.__init__(self,take_photo)
+#         Phone.__init__(self,make_call)
 #         self.browse_internet = browse_internet
 
 # class Display(Smart_Phone):

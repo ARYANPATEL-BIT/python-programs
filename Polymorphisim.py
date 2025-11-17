@@ -109,7 +109,7 @@
 
 
 # class CreditCard:
-#     def make_payment(slef,amount):
+#     def make_payment(self,amount):
 #         print(amount)
 
 # class PayPal:
@@ -125,7 +125,6 @@
 
 # for method in [CreditCard(),PayPal(),UPI()]:
 #     process_payment(method,2834)
-
 
 
 ## over riding method
