@@ -3,7 +3,7 @@
 #     b = int(input("Enter a number:"))
 #     c = a/b
 # except ZeroDivisionError:
-#     print("cannot devide by zero")
+#     print("cannot divide by zero")
 # else:
 #     print("division succesfull")
 # finally:
@@ -54,14 +54,14 @@
 # b = int(input("enter a number"))
 
 # try:
-#     result = a/ b
+#     result = a / b
 #     print(result)
 # except ArithmeticError:
 #     print("Cannot divide by zero! please enter a valid number")
 # except ValueError as e:
-#     print(f"Please enter a valid value. (Error ${e})")
+#     print(f"Please enter a valid value. (Error {e})")
 # except Exception as e:
-#     print(f"( Error: ${e})")
+#     print(f"( Error: {e})")
 # else:
 #     print("Program Exceuted Succesfully")
 
@@ -84,7 +84,7 @@
 # except Exception as e:
 #     print(e)
 # finally:
-#     print("Program excecuted successful")
+    # print("Program excecuted successful")
 
 
 # def celsius_to_fahrenheit(celsius):

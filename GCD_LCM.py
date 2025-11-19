@@ -13,13 +13,23 @@
 
 ## common GCD of an array
 
-def find_hcf(arr):
+
+
+# def find_hcf(arr):
+#     smallest = min(arr)
+#     largest = max(arr)
+#     while largest % smallest != 0:
+#         largest , smallest = smallest , largest% smallest
+#     return smallest
+
+# a = find_hcf([1,2,3,4,5,6,7,8,9,10])
+# print(a)
+
+
+def find_lcm(arr):
+    a = 1
     smallest = min(arr)
     largest = max(arr)
-    while largest % smallest != 0:
-        largest , smallest = smallest , largest% smallest
-    return smallest
+    return (smallest*largest) % a
 
-
-print(find_hcf([1,2,3,4,5,6,7,8,9,10]))
-
+print(find_lcm([1,2,3,4,5,6,7,8,9,10]))

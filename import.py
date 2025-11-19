@@ -29,7 +29,6 @@ import random
 
 import datetime
 
-
 # now = datetime.datetime.now()
 # print(now)
 
@@ -38,7 +37,6 @@ import datetime
 # print(now.month)
 # print(now.day)
 # print(date)
-
 
 
 import Currency_converter
@@ -213,10 +211,9 @@ import random
 
 import datetime
 
-# dob = datetime.date(2005,7,20)
-# today = datetime.date.today()
-# age_days = (today-dob).days
-# age_years = age_days // 365
-# print(age_years)
-# print(age_days)
-
+dob = datetime.date(2005,7,20)
+today = datetime.date.today()
+age_days = (today-dob).days
+age_years = age_days // 365
+print(age_years)
+print(age_days)
