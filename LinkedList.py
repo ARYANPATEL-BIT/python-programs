@@ -86,109 +86,212 @@
 # ssl.traverse()
 
 
-class Node:
-    def __init__(self, val):
-        self.val = val
-        self.next = None
+# class Node:
+#     def __init__(self,val):
+#         self.val = val
+#         self.next = None
 
-class SinglyLinkedList:
-    def __init__(self):
-        self.head = None
+# class LL:
+#     def __init__(self) -> None:
+#         self.head = None
 
-    def append(self,data):
-        new_node = Node(data)
+#     def append(self,data):
+#         new_node = Node(data)
 
-        # if self.head is None:
-        if not self.head:
-            self.head = new_node
-        else:
-            current = self.head
-            while current.next is not None:
-                current = current.next
-            current.next = new_node
-    
-    def traverse(self):
-        if not self.head:
-            print("SLL is empty")
+#         if self.head is None:
+#             self.head = new_node
+
+#         else:
+#             current = self.head
+#             while current.next is not None:
+#                 current = current.next
+#             current.next = new_node
         
-        else:
-            current = self.head
-            while current is not None:
-                print(current.val, end=" ")
-                current = current.next
-            print()
+#     def traverse(self):
+
+#         if not self.head:
+#             print("SLL is Empty")
+
+#         else:
+#             current = self.head
+#             while current is not None:
+#                 print(current.val , end=" ")
+#                 current = current.next
+#                 print()
+
+# sll = LL()
+
+# sll.append(1)
+# sll.append(2)
+# sll.append(3)
+# sll.append(4)
+# sll.append(5)
+
+# sll.traverse()
 
 
-    def insert_at(self,val,position):
-        new_node = Node(val)
 
-        if position == 0:
-            new_node.next = self.head
-            self.head = new_node
-        else:
-            prev_node = None
-            current = self.head
-            count = 0
-            while current is not None and count < position:
-                prev_node = current
-                current = current.next
-                count += 1
-            prev_node.next = new_node
-            new_node.next = current
+# class Node:
+#     def __init__(self, val):
+#         self.val = val
+#         self.next = None
 
-    def delete(self, val):
-        temp = self.head
-        if temp.next is not None:
-            if temp.val == val:
-                self.head = temp.next
-                return
-            else:
-                found = False
-                prev = None
-                while temp is not None:
-                    if temp.val == val:
-                        found = True
-                        break
-                    prev = temp
-                    temp = temp.next
+# class SinglyLinkedList:
+#     def __init__(self):
+#         self.head = None
 
-                if found:
-                    prev.next = temp.next
-                    return
-                else:
-                    print("Node Not Found")
+#     def append(self,data):
+#         new_node = Node(data)
+
+#         # if self.head is None:
+#         if not self.head:
+#             self.head = new_node
+#         else:
+#             current = self.head
+#             while current.next is not None:
+#                 current = current.next
+#             current.next = new_node
     
-            
-
+#     def traverse(self):
+#         if not self.head:
+#             print("SLL is empty")
         
+#         else:
+#             current = self.head
+#             while current is not None:
+#                 print(current.val, end=" ")
+#                 current = current.next
+#             print()
 
+
+#     def insert_at(self,val,position):
+#         new_node = Node(val)
+
+#         if position == 0:
+#             new_node.next = self.head
+#             self.head = new_node
+#         else:
+#             prev_node = None
+#             current = self.head
+#             count = 0
+#             while current is not None and count < position:
+#                 prev_node = current
+#                 current = current.next
+#                 count += 1
+#             prev_node.next = new_node
+#             new_node.next = current
+
+    # def delete(self, val):
+    #     temp = self.head
+    #     if temp.next is not None:
+    #         if temp.val == val:
+    #             self.head = temp.next
+    #             return
+    #         else:
+    #             found = False
+    #             prev = None
+    #             while temp is not None:
+    #                 if temp.val == val:
+    #                     found = True
+    #                     break
+    #                 prev = temp
+    #                 temp = temp.next
+
+    #             if found:
+    #                 prev.next = temp.next
+    #                 return
+    #             else:
+    #                 print("Node Not Found")
+
+  
+# sll = SinglyLinkedList()
+# sll.append(10)
+# sll.append(20)
+# sll.append(30)
+# sll.append(40)
+# sll.append(1)
+# sll.insert_at(5,2)
+# sll.delete(30)
+# sll.traverse()
+
+
+# class Node:
+#     def __init__(self,val):
+#         self.val = val
+#         self.next = None
+
+# class SLL:
+#     def __init__(self):
+#         self.head = None
+    
+#     def append(self,val):
+#         new_node = Node(val)
+
+#         if not self.head:
+#             self.head = new_node
+#         else:
+#             current = self.head
+#             while current.next is not None:
+#                 current = current.next
+#             current.next = new_node
+    
+#     def traverse(self):
+#         if not self.head:
+#             print("SLL is Empty")
+#         else:
+#             current = self.head
+#             while current is not None:
+#                 print(current.val,end=" ")
+#                 current = current.next
+#                 print()
 
     
-sll = SinglyLinkedList()
-sll.append(10)
-sll.append(20)
-sll.append(30)
-sll.append(40)
-sll.append(1)
-sll.insert_at(5,2)
-sll.delete(30)
-sll.traverse()
+#     def insertion(self,position,val):
+#         new_node = Node(val)
+
+#         if position == 0:
+#             new_node.next = self.head
+#             self.head = new_node
+#         else:
+#             current = self.head
+#             count = 0
+#             prev_node = None
+#             while count < position and current is not None:
+#                 prev_node = current
+#                 current = current.next
+#                 count += 1
+#             prev_node.next = new_node
+#             new_node.next = current
+
+#     def deletion(self,val):
+#         temp = self.head
+#         if temp.next is not None:
+#             if temp.val == val:
+#                 self.head = temp.next
+#                 return
+#             else:
+#                 prev = None
+#                 found = False
+#                 while temp is not None:
+#                     if temp.val == val:
+#                         found = True
+#                         break
+#                     prev = temp
+#                     temp = temp.next
+
+#                 if found:
+#                     prev.next = temp.next
+#                     return
+#                 print("Node Not Found!")
 
 
-# def insert_at(self, val, position):
-#     new_node = Node(val)
-      # insertion at 1st index
-#     if position == 0:
-#         new_node.next = self.head
-#         self.head = new_node
-      # insertion at a given postion
-#     else:
-#         current = self.head
-#         prev_node = None
-#         count = 0
-#         while current is not None and count < position:
-#             prev_node = current
-#             current = current.next
-#             count += 1
-#         prev_node.next = new_node
-#         new_node.next = current
+# sll = SLL()
+# sll.append(10)
+# sll.append(20)
+# sll.append(30)
+# sll.append(40)
+# sll.append(1)
+# sll.insertion(0,2)
+# sll.traverse()
+# sll.deletion(20)
+# sll.traverse()
