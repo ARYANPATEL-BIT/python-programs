@@ -167,7 +167,87 @@ class DoublyLinkedList:
             if current.next:
                 current.next.prev = new_node
             current.next = new_node
+
+    def delete_head(self):
+        if self.head is None:
+            return
         
+        if not self.head.next:
+            self.head = None
+            return
+        
+        self.head = self.head.next 
+        self.head.prev = None
+
+    def delete_last(self):
+        if self.head.next is None:
+            self.head = None
+        else:
+            current = self.head
+            while current.next.next is not None:
+                current = current.next
+            current.next.prev = None
+            current.next = None
+        
+    # def deletion(self,val):
+
+    #     if self.head is None:
+    #         return
+        
+    #     current = self.head
+    #     while current and current.val != val:
+    #         current = current.next
+        
+    #     if current is None:
+    #         print("Node not Found")
+    #         return
+        
+    #     if current == self.head:
+    #         if self.head.next is None:
+    #             self.head = None
+    #             return
+    #         self.head = self.head.next
+    #         self.head.prev = None
+    #         return
+        
+    #     if current.next is not None:
+    #         current.prev.next = current.next
+    #         current.next.prev = current.prev
+    #     else:
+    #         current.prev.next = None
+        
+
+    def deletion(self,val):
+
+        if self.head is None:
+            return
+        
+        current = self.head
+        while current and current.val != val:
+            current = current.next
+        
+        if current is None:
+            print("Node not Found!")
+            return
+        
+        if current == self.head:
+            if self.head.next is None:
+                self.head = None
+            else:
+                self.head = self.head.next
+                self.head.prev = self.head
+                return
+        
+        if current.next is not None:
+            current.prev.next = current.next
+            current.next.prev = current.prev
+        else:
+            current.next.prev = None
+        
+        
+        
+
+
     def traverse(self):
         if self.head is None:
             print("Doubly LinkedList is Empty")
@@ -189,4 +269,10 @@ dll.traverse()
 dll.insert_at_head(5)
 dll.traverse()
 dll.insert_at(25,3)
+dll.traverse()
+dll.delete_head()
+dll.traverse()
+dll.delete_last()
+dll.traverse()
+dll.deletion(20)
 dll.traverse()
