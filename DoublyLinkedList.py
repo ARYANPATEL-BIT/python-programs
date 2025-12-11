@@ -35,7 +35,7 @@
 
 #         # while temp
 #         while temp.next is not None:
-#             print(temp , end=" ")
+#             print(temp.val , end=" ")
 #             temp = temp.next
 #         print("")
 
@@ -44,4 +44,149 @@
 # DLL.insert_at_beigging(20)
 # DLL.insert_at_beigging(30)
 # DLL.insert_at_beigging(40)
-# DLL.Display()
+# DLL.display()
+
+
+# class Node:
+#     def __init__(self,val):
+#         self.val = val
+#         self.next = None
+#         self.prev = None
+
+# class DoublyLinkedList:
+#     def __init__(self):
+#         self.head = None
+    
+#     def insert_at_head(self,val):
+#         new_node = Node(val)
+
+#         if self.head is None:
+#             self.head = new_node
+#             return
+#         else:
+#             new_node.next = self.head
+#             self.head.prev = new_node
+#             self.head = new_node
+    
+#     def insert_at(self,val,position):
+#         new_node = Node(val)
+
+#         if position == 0:
+#             if self.head:
+#                 new_node.next = self.head
+#                 self.head.prev = new_node
+#             self.head = new_node
+#             return
+        
+        
+        
+#         current = self.head 
+#         count = 0
+#         while count < position - 1 and current:
+#             current = current.next 
+#             count += 1
+            
+#         if current is None:
+#             print("Position out of bound")
+#             return
+            
+#         new_node.next = current.next
+#         new_node.prev = current
+#         if current.next:
+#             current.next.prev = new_node
+#         current.next = new_node
+
+#     def printValues(self):
+#         if self.head is None:
+#             print("Doubly Linked List is empty")
+        
+#         current = self.head
+#         while current:
+#             print(current.val,end=" ")
+#             current= current.next
+#         print()
+
+    
+# dll = DoublyLinkedList()
+# dll.insert_at(10,0)
+# dll.insert_at(20,1)
+# dll.insert_at(30,2)
+# dll.insert_at(40,3)
+# dll.insert_at(50,4)
+# dll.printValues()
+# dll.insert_at_head(5)
+# dll.printValues()
+# dll.insert_at(25,3)
+# dll.printValues()
+
+
+class Node:
+    def __init__(self,val):
+        self.val = val
+        self.next = None
+        self.prev = None
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+    
+    def insert_at_head(self,val):
+        new_node = Node(val)
+
+        if self.head is None:
+            self.head = new_node
+        
+        else:
+            new_node.next = self.head
+            self.head.prev = new_node
+            self.head = new_node
+
+    def insert_at(self,val ,position):
+        new_node = Node(val)
+        
+        if position == 0:
+            if self.head:
+                new_node.next = self.head
+                self.head.prev = new_node
+            self.head = new_node
+            return
+        
+        else:
+            count = 0 
+            current = self.head
+            while count < position -1 and current:
+                current = current.next
+                count += 1
+            
+            if  current is None:
+                print("Position out of bound")
+                return
+            
+            new_node.next = current.next
+            new_node.prev = current
+            if current.next:
+                current.next.prev = new_node
+            current.next = new_node
+        
+    def traverse(self):
+        if self.head is None:
+            print("Doubly LinkedList is Empty")
+        
+        else:
+            current = self.head
+            while current:
+                print(current.val,end=" ")
+                current = current.next
+            print()
+
+dll = DoublyLinkedList()
+dll.insert_at(10,0)
+dll.insert_at(20,1)
+dll.insert_at(30,2)
+dll.insert_at(40,3)
+dll.insert_at(50,4)
+dll.traverse()
+dll.insert_at_head(5)
+dll.traverse()
+dll.insert_at(25,3)
+dll.traverse()
