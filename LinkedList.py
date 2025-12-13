@@ -215,83 +215,94 @@
 # sll.traverse()
 
 
-# class Node:
-#     def __init__(self,val):
-#         self.val = val
-#         self.next = None
+class Node:
+    def __init__(self,val):
+        self.val = val
+        self.next = None
 
-# class SLL:
-#     def __init__(self):
-#         self.head = None
+class SLL:
+    def __init__(self):
+        self.head = None
     
-#     def append(self,val):
-#         new_node = Node(val)
+    def append(self,val):
+        new_node = Node(val)
 
-#         if not self.head:
-#             self.head = new_node
-#         else:
-#             current = self.head
-#             while current.next is not None:
-#                 current = current.next
-#             current.next = new_node
+        if not self.head:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next is not None:
+                current = current.next
+            current.next = new_node
     
-#     def traverse(self):
-#         if not self.head:
-#             print("SLL is Empty")
-#         else:
-#             current = self.head
-#             while current is not None:
-#                 print(current.val,end=" ")
-#                 current = current.next
-#                 print()
+    def traverse(self):
+        if not self.head:
+            print("SLL is Empty")
+        else:
+            current = self.head
+            while current is not None:
+                print(current.val,end=" ")
+                current = current.next
+                print()
 
-    
-#     def insertion(self,position,val):
-#         new_node = Node(val)
+    def middle_val(self):
+        slow = self.head
+        fast = self.head
+        
+        while fast.next and fast.next.next:
+            slow = slow.next
+            fast = fast.next.next
+        
+        return slow.val
 
-#         if position == 0:
-#             new_node.next = self.head
-#             self.head = new_node
-#         else:
-#             current = self.head
-#             count = 0
-#             prev_node = None
-#             while count < position and current is not None:
-#                 prev_node = current
-#                 current = current.next
-#                 count += 1
-#             prev_node.next = new_node
-#             new_node.next = current
+    def insertion(self,position,val):
+        new_node = Node(val)
 
-#     def deletion(self,val):
-#         temp = self.head
-#         if temp.next is not None:
-#             if temp.val == val:
-#                 self.head = temp.next
-#                 return
-#             else:
-#                 prev = None
-#                 found = False
-#                 while temp is not None:
-#                     if temp.val == val:
-#                         found = True
-#                         break
-#                     prev = temp
-#                     temp = temp.next
+        if position == 0:
+            new_node.next = self.head
+            self.head = new_node
+        else:
+            current = self.head
+            count = 0
+            prev_node = None
+            while count < position and current is not None:
+                prev_node = current
+                current = current.next
+                count += 1
+            prev_node.next = new_node
+            new_node.next = current
 
-#                 if found:
-#                     prev.next = temp.next
-#                     return
-#                 print("Node Not Found!")
+    def deletion(self,val):
+        temp = self.head
+        if temp.next is not None:
+            if temp.val == val:
+                self.head = temp.next
+                return
+            else:
+                prev = None
+                found = False
+                while temp is not None:
+                    if temp.val == val:
+                        found = True
+                        break
+                    prev = temp
+                    temp = temp.next
+
+                if found:
+                    prev.next = temp.next
+                    return
+                print("Node Not Found!")
 
 
-# sll = SLL()
-# sll.append(10)
-# sll.append(20)
-# sll.append(30)
-# sll.append(40)
-# sll.append(1)
-# sll.insertion(0,2)
+sll = SLL()
+sll.append(10)
+sll.append(20)
+sll.append(30)
+sll.append(40)
+sll.append(1)
+sll.insertion(0,2)
 # sll.traverse()
-# sll.deletion(20)
+sll.deletion(20)
+# sll.traverse()
+print(sll.middle_val())
 # sll.traverse()
