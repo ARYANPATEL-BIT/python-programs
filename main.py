@@ -877,3 +877,15 @@
 
 
 # exception handaling / Error Handaling
+
+## HashMap Methods
+arr = [1,2,3,4,5,5,4,3,2,1]
+freq = {}
+for num in arr:
+    freq[num] = freq.get(num,0)+1
+
+for num in arr:
+    if num in freq:
+        freq[num] += 1
+    else:
+        freq[num] = 1
